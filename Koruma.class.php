@@ -6,7 +6,7 @@
         {
             $yeni = trim($str);
             $yeni = strip_tags($yeni);
-            $yeni = str_replace(["insert", "INSERT", "delete", "DELETE", "select", "SELECT", "exec", "EXEC", "union", "UNION", "drop", "DROP"], "", $yeni);
+            $yeni = str_replace(["insert", "INSERT", "delete", "DELETE", "select", "SELECT", "exec", "EXEC", "union", "UNION", "drop", "DROP", "{", "?", "'", """, "="], "", $yeni);
             return $yeni;
         }
         public static function Input($str)
